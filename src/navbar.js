@@ -11,12 +11,12 @@ function renderNav() {
     const menu = document.createElement('li');
     menu.innerText = 'menu';
 
-    const about = document.createElement('li');
-    about.innerText = 'about';
+    const contact = document.createElement('li');
+    contact.innerText = 'contact';
 
     nav.appendChild(home);
     nav.appendChild(menu);
-    nav.appendChild(about);
+    nav.appendChild(contact);
 
     content.appendChild(nav);
 }
