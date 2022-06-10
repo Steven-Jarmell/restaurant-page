@@ -18,6 +18,8 @@ const menu = [
     }
 ];
 
+const sides = ["Baked Beans", "French Fries", "Mac and Cheese", "Cornbread", "Baked Apples", "Coleslaw"];
+
 function renderMenu() {
     const menuDiv = document.createElement('div');
     menuDiv.className = 'menu-div';
@@ -26,8 +28,18 @@ function renderMenu() {
     menuTitle.className = 'menu-title';
     menuTitle.innerText = 'menu';
 
+    const entreesTitle = document.createElement('h2');
+    entreesTitle.className = 'menu-section';
+    entreesTitle.innerText = 'entrees';
+
+    const sidesTitle = document.createElement('h2');
+    sidesTitle.className = 'menu-section';
+    sidesTitle.innerText = 'sides';
+
     const menuItems = document.createElement('div');
     menuItems.className = 'menu-items';
+
+    menuItems.append(entreesTitle);
 
     menu.forEach((item) => {
 
@@ -38,7 +50,6 @@ function renderMenu() {
         const pictureName = item.name.toLowerCase().replace(' ', '_');
         
         if (pictureName === "smoked_turkey") {
-            console.log(1);
             itemPicture.src = `./images/${pictureName}.jpg`;
         }
         else {
@@ -69,8 +80,23 @@ function renderMenu() {
         menuItems.append(itemDiv);
     });
 
+    const sideItems = document.createElement('div');
+    sideItems.className = 'side-items';
+
+    sides.forEach((item) => {
+        const itemName = document.createElement('p');
+        itemName.innerText = item;
+        itemName.className = 'side-item';
+
+        sideItems.append(itemName);
+    });
+
+    menuItems.append(sidesTitle);
+    menuItems.append(sideItems);
+
     menuDiv.append(menuTitle);
     menuDiv.append(menuItems);
+
     content.append(menuDiv);
 }
 
