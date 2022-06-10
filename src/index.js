@@ -1,11 +1,24 @@
 import { renderNav } from "./navbar";
 import { renderHome } from "./home";
 import { renderFooter } from "./footer";
+import { renderMenu } from "./menu";
 
 const content = document.getElementById('content');
 
-renderNav();
-renderHome();
-renderFooter();
+function loadHome() {
+    content.innerHTML = '';
+    renderNav();
+    renderHome();
+    renderFooter();
+}
+
+function loadMenu() {
+    content.innerHTML = '';
+    renderNav();
+    renderMenu();
+    renderFooter();
+}
+
+loadHome();
 
 export { content };
