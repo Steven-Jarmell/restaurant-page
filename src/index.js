@@ -1,7 +1,11 @@
 import { renderNav } from "./navbar";
+import { renderHome } from "./home";
+import { renderFooter } from "./footer";
 
 const content = document.getElementById('content');
 
-//renderNav(); works
+renderNav();
+renderHome();
+renderFooter();
 
 export { content };
