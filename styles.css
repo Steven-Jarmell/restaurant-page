@@ -128,7 +128,8 @@ img {
     border: none;
 }
 
-.item-info {
+.item-info,
+.side-item {
     width: 50vw;
     display: flex;
     flex-direction: column;
@@ -144,5 +145,29 @@ img {
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.menu-section {
+    font-family: 'Carter One', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 6vh;
+    margin-bottom: 0;
+    color: #571e1a;
+    -webkit-text-stroke: .5px rgb(50,50,50);
+}
+
+.side-item {
+    align-items: center;
+}
+
+.side-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
     margin-top: 25px;
 }
