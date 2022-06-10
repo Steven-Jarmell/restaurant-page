@@ -21,4 +21,11 @@ function loadMenu() {
 
 loadHome();
 
+document.addEventListener('click', (e) => {
+    const target = e.target.innerText;
+
+    if (target === 'HOME') loadHome();
+    if (target === 'MENU') loadMenu();
+});
+
 export { content };
