@@ -27,7 +27,7 @@ function loadContact() {
     renderFooter();
 }
 
-loadContact();
+loadHome();
 
 document.addEventListener('click', (e) => {
     const target = e.target.innerText;
