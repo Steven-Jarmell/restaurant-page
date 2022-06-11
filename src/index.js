@@ -2,6 +2,7 @@ import { renderNav } from "./navbar";
 import { renderHome } from "./home";
 import { renderFooter } from "./footer";
 import { renderMenu } from "./menu";
+import { renderContact } from "./contact";
 
 const content = document.getElementById('content');
 
@@ -19,13 +20,21 @@ function loadMenu() {
     renderFooter();
 }
 
-loadHome();
+function loadContact() {
+    content.innerHTML = '';
+    renderNav();
+    renderContact();
+    renderFooter();
+}
+
+loadContact();
 
 document.addEventListener('click', (e) => {
     const target = e.target.innerText;
 
     if (target === 'HOME') loadHome();
     if (target === 'MENU') loadMenu();
+    if (target === 'CONTACT') loadContact();
 });
 
 export { content };
