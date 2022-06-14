@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+:root {
+    --main-font: 'Carter One', cursive;
+    --color-gray: #323232;
+    --color-red: #571e1a;
+}
 /* Navbar */
 
 .navbar {
@@ -8,7 +13,7 @@
     height: 10vh;
     border-bottom: 4px solid black;
     margin: 0;
-    font-family: 'Carter One', cursive;
+    font-family: var(--main-font);
 }
 
 ul {
@@ -53,8 +58,8 @@ li:hover {
     flex-direction: column;
     align-items: center;
     height: 70vh;
-    font-family: 'Carter One', cursive;
-    color: rgb(255, 255, 255);
+    font-family: var(--main-font);
+    color: white;
     -webkit-text-stroke: 1px black;
     background-image: url(./images/ribs_image.bmp);
     background-size: cover;
@@ -86,7 +91,7 @@ li:hover {
 /* Menu */
 
 .menu-title {
-    font-family: 'Carter One', cursive;
+    font-family: var(--main-font);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,7 +107,7 @@ img {
     width: auto;
     justify-content: center;
     border-radius: 10px;
-    border: 1px solid rgb(50,50,50);
+    border: 1px solid var(--color-gray);
 }
 
 .menu-items {
@@ -135,12 +140,12 @@ img {
     flex-direction: column;
     justify-content: center;
     
-    font-family: 'Carter One', cursive;
+    font-family: var(--main-font);
     font-size: 1rem;
 }
 
 .menu-div {
-    background-color: rgb(50,50,50);
+    background-color: var(--color-gray);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -149,15 +154,15 @@ img {
 }
 
 .menu-section {
-    font-family: 'Carter One', cursive;
+    font-family: var(--main-font);
     display: flex;
     justify-content: center;
     align-items: center;
     text-transform: capitalize;
     font-size: 6vh;
     margin-bottom: 0;
-    color: #571e1a;
-    -webkit-text-stroke: .5px rgb(50,50,50);
+    color: var(--color-red);
+    -webkit-text-stroke: .5px var(--color-gray);
 }
 
 .side-item {
@@ -175,7 +180,7 @@ img {
 /* Contact Page */
 
 .contact-title {
-    font-family: 'Carter One', cursive;
+    font-family: var(--main-font);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,7 +192,7 @@ img {
 }
 
 .contact-div {
-    background-color: rgb(50,50,50);
+    background-color: var(--color-gray);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -211,13 +216,13 @@ img {
     font-size: 2rem;
     display: flex;
     align-items: center;
-    font-family: 'Carter One', cursive;
+    font-family: var(--main-font);
     gap: 1rem;
 }
 
 #symbol {
     font-size: 2rem;
-    color: #571e1a;
+    color: var(--color-red);
 }
 
 .contact-form {
@@ -230,7 +235,7 @@ textarea {
     border: none;
     border-bottom: 2px solid #571e1a;
     font-size: 1.5rem;
-    font-family: 'Carter One', cursive;
+    font-family: var(--main-font);
 }
 
 .form-root {
@@ -241,7 +246,7 @@ textarea {
 
 .contact-button {
     font-size: 1.5rem;
-    font-family: 'Carter One', cursive;
+    font-family: var(--main-font);
     border-radius: 5px;
     border: none;
     width: 10rem;
@@ -249,6 +254,6 @@ textarea {
 
 .contact-button:hover {
     cursor: pointer;
-    background-color: rgb(50,50,50);
+    background-color: var(--color-gray);
     color: white;
 }
